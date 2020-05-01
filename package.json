@@ -4,12 +4,18 @@
   "description": "A Module Handbook App for supporting collaborative module handbook authoring and summaries for studies.",
   "main": "main.js",
   "scripts": {
+    "run": "npm main.js",
     "run dev": "nodemon main.js",
-    "mongo": "docker compose up -d",
-    "mongobash": "docker compose exec mongo bash",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mongo": "docker-compose up -d",
+    "mongobash": "docker-compose exec mongo bash",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "Barne Kleinen",
+  "jest": {
+    "verbose": true,
+    "preset": "@shelf/jest-mongodb"
+  },
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -19,7 +25,25 @@
     "http-status-codes": "^1.4.0",
     "jquery": "^3.5.0",
     "mongoose": "^5.9.11",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.0.1",
     "nodemon": "^2.0.3",
-    "popper.js": "^1.16.1"
+    "open": "^7.0.3",
+    "superagent": "^5.2.2",
+    "supertest": "^4.0.2"
   }
 }
