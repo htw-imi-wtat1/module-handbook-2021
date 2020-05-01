@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 # Example for Getting Programming with Node 
 
 * for [WTAT1 SoSe 21](https://bkleinen.github.io/classes/ss2021/wtat1/topics/sprint-02)
 
 * see backlog below
+=======
+# Example for Getting Programming with Node Sprints 02 - 04
+
+![Node.js CI](https://github.com/htw-imi-wtat1/module-handbook/workflows/Node.js%20CI/badge.svg)
+
+* for [WTAT1 SoSe 20](https://bkleinen.github.io/classes/ss2020/wtat1/topics/topic-04-first-express-app/)
+* see backlog below
+* App on Heroku: https://wtat1-module-handbook.herokuapp.com/
+>>>>>>> 242d975 (Sprint 03 part 2)
 
 ## Usage
 
@@ -11,14 +21,25 @@
     * production: node main.js
     * development: nodemon main.js  
 
+<<<<<<< HEAD
     # Sprint 04: Deployment
 
     ## Linting with eslint
+=======
+# Sprint 04: Deployment
+
+## Preparation: Linting, Debugging und Logging
+### Linting with eslint
+>>>>>>> 242d975 (Sprint 03 part 2)
 
         npm install eslint --save-dev
         npx eslint --init
         
 and then, for example, run:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 242d975 (Sprint 03 part 2)
         npx eslint main.js
         npx eslint coursesController.js --fix
         
@@ -38,16 +59,28 @@ it is possible to run eslint automatically on save by configuring it under
 * https://www.jetbrains.com/help/webstorm/eslint.html#
 * https://standardjs.com/
 
+<<<<<<< HEAD
 ## Debugger/Logger
+=======
+>>>>>>> 242d975 (Sprint 03 part 2)
 
 ### Logging
     export DEBUG=*
     node main.js
 
+<<<<<<< HEAD
 ### oder über morgan
 
 * installed morgan: npm install morgan
 * use morgan in main.js:
+=======
+#### oder über morgan:
+
+* installed morgan: npm install morgan
+* use morgan in main.js:
+
+
+>>>>>>> 242d975 (Sprint 03 part 2)
     const morgan = require('morgan')
     app.use(morgan(":method :url :status * :response-time ms"))
 
@@ -63,6 +96,7 @@ I use the debugger in JetBrains WebStorm. I had to create a second run configura
 
 * Debugging node in WebStorm: https://www.jetbrains.com/help/webstorm/running-and-debugging-node-js.html#
 
+<<<<<<< HEAD
 
 ## Testing with Mocha
 
@@ -96,6 +130,70 @@ I use the debugger in JetBrains WebStorm. I had to create a second run configura
 # Sprint 01 & 02
 
 # Sprint 02
+=======
+## Deployment on Heroku
+
+### Installing Heroku CLI
+
+- Follow the Installation instructions for your Platform here: Heroku CLI: 
+[https://devcenter.heroku.com/articles/getting-started-with-nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+
+    heroku create
+
+this automatically puts a new heroku remote into the git config, run
+
+    cat .git/config
+
+to confirm that if you are curious
+
+### Create and Rename your Heroku app
+
+Your app should be named according to your group name; please use this form: wtat1-group-x .
+
+    heroku rename wtat1-module-handbook
+
+### Preparing the Codebase
+
+After setting up the heroku cli (command line interface), you can go straight to "Preparing your Codebase for Heroku Deployment":
+
+- [Preparing a Codebase for Heroku Deployment](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment)
+
+*  [Add a Procfile](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment#3-add-a-procfile)
+
+
+    echo "web: node main.js" > Procfile
+
+* rename your app:
+
+
+    heroku rename wtat1-module-handbook
+    
+
+
+## Testing with Mocha
+
+    npm install mocha --save-dev
+    npm install chai --save-dev
+    npm i chai-http --save-dev
+
+* Added tests as described in the chapter, except:
+    * examples in book use arrow functions, the documentation advises not to: https://mochajs.org/#arrow-functions
+    * more concise switching of environment specific configuration
+    * we don't have user crud yet, but the test examples were easily transferable to course
+    * created test for saving new courses in test/coursesControllerSaveSpec.js
+    * (chose this structure to keep the examples simple)
+    * I had to add `env: mocha: true` to .eslintrcyml to have eslint recognise describe and it
+          
+          
+* Mocha: https://mochajs.org/
+* Chai: https://www.chaijs.com/
+* The examples uses the expect assertion syntax: https://www.chaijs.com/guide/styles/#expect
+* https://www.chaijs.com/api/bdd/
+* https://github.com/chaijs/chai-http
+
+  
+# Sprint 03
+>>>>>>> 242d975 (Sprint 03 part 2)
 
 This sprint is about persisting data in the database.  
 As I finally want my modules in the database, I will implement the story
@@ -103,8 +201,16 @@ As I finally want my modules in the database, I will implement the story
 | 015 | As a program creator, I can create new Courses for a program.
 
 Note that this week is just about retrieving data and creating new simple records.
+<<<<<<< HEAD
 I've also created an example below how the database can be populated with test data using
 mongoimport (not in the book).
+=======
+
+I've also created an example below how the database can be populated with test data using
+mongoimport (not in the book), which I actually switched back during the next sprint 
+as the variant shown in the book using a seeding script in JavaScript makes seeding on 
+Heroku simpler and more secure. So rather follow the book right away on seeding.
+>>>>>>> 242d975 (Sprint 03 part 2)
 
 ## Mongo Installation
 
@@ -117,17 +223,35 @@ you can just copy docker-compose.yml and use the scripts I've added to package.j
 
 ## Mongo Commands
 
+<<<<<<< HEAD
 after starting the cli with ``mongo`` (if you've installed mongo in docker as described above, run yarn run mongobash first)
     show dbs
     use modulehandbook_db
     show collections
     db.courses.findOne()
+=======
+after starting the cli with ``mongo``
+
+    show dbs
+    use courses
+    show collections
+    db.courses.findOne
+>>>>>>> 242d975 (Sprint 03 part 2)
     db.courses.deleteMany({})
     db.courses.update(..)
 
 ## Seeding the database
 
+<<<<<<< HEAD
 ( in the mongo container:)
+=======
+Lesson 15 ends with an example on how to seed the database using JavaScript.
+
+I tried out mongoimport in the example app, which is easier to create, but
+not as convenient to call. Seeding the database on heroku is easier if you
+have a JavaScript script as described in the book, and safer as you don't have
+to juggle your heroku database credentials around.
+>>>>>>> 242d975 (Sprint 03 part 2)
 
     mongoimport --uri "mongodb://localhost:27017/modulehandbook_db" --collection=courses data/seed/tryout
     mongoexport --uri "mongodb://localhost:27017/modulehandbook_db" --collection=courses  > data/seed/export    
@@ -135,7 +259,11 @@ after starting the cli with ``mongo`` (if you've installed mongo in docker as de
 ## Documentation
 - Mongoose: https://mongoosejs.com/
 - Mongoose getting started: https://mongoosejs.com/docs/index.html
+<<<<<<< HEAD
 - Schematypes: https://mongoosejs.com/docs/schematypes.html
+=======
+- Schema types: https://mongoosejs.com/docs/schematypes.html
+>>>>>>> 242d975 (Sprint 03 part 2)
 
 
 # Sprint 01 & 02
@@ -196,6 +324,7 @@ For implementing this, I will touch story 023 again and fill it with complete co
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 | #   | Story                                                                                                                                                                                                | Sprint    | Status                                     |
 |:--- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------- |:------------------------------------------ |
 | 042 | As a student or lecturer, I see an overview of the whole study program with all modules including Title, Format and ECTS on the site.                                                                | Sprint 01 | Basic Implementation                       |
@@ -218,6 +347,8 @@ For implementing this, I will touch story 023 again and fill it with complete co
 | 013 | As an Administrator, I can change all roles of all users in the module database.                                                                                                                     |           |                                            |
 
 =======
+=======
+>>>>>>> 242d975 (Sprint 03 part 2)
 | #   | Story                                                                                                                                                                                                | Sprint       | Status                                     |
 |:----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:-------------------------------------------|
 | 042 | As a student or lecturer, I see an overview of the whole study program with all modules including Title, Format and ECTS on the site.                                                                | Sprint 01    | Basic Implementation                       |
@@ -239,7 +370,10 @@ For implementing this, I will touch story 023 again and fill it with complete co
 | 012 | As an Administrator, I can add or approve new users to the module database.                                                                                                                          |              |                                            |
 | 013 | As an Administrator, I can change all roles of all users in the module database.                                                                                                                     |              |                                            |
 |     |                                                                                                                                                                                                      |              |                                            |
+<<<<<<< HEAD
 >>>>>>> b3bf37f (documentation)
+=======
+>>>>>>> 242d975 (Sprint 03 part 2)
 ## Roles in the App
 
 Administrator

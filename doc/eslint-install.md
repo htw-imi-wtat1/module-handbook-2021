@@ -1,3 +1,5 @@
+
+<pre>
 no changes added to commit (use "git add" and/or "git commit -a")
 ~/mine/current/htw/courses/ss2020/wtat1/code/module-handbook (master)$ npx eslint --init
 ? How would you like to use ESLint? To check syntax, find problems, and enforce code style
@@ -18,7 +20,9 @@ Error: SyntaxError: Unexpected token } in JSON at position 792
     at processTicksAndRejections (internal/process/task_queues.js:97:5)
 ~/
 
-
+</pre>
+<pre></pre>
+>>>>>>> 242d975 (Sprint 03 part 2)
 ~/mine/current/htw/courses/ss2020/wtat1/code/module-handbook (master)$ npx eslint --init
 ? How would you like to use ESLint? To check syntax, find problems, and enforce code style
 ? What type of modules does your project use? JavaScript modules (import/export)
