@@ -1,14 +1,117 @@
-# Example for Getting Programming with Node Sprints 01 and 02
+
+# Example for Getting Programming with Node 
 
 * for [WTAT1 SoSe 21](https://bkleinen.github.io/classes/ss2021/wtat1/topics/sprint-02)
+
 * see backlog below
+
+![Node.js CI](https://github.com/htw-imi-wtat1/module-handbook-2021/workflows/Node.js%20CI/badge.svg)
+
+* for [WTAT1 SoSe 20](https://bkleinen.github.io/classes/ss2020/wtat1/topics/topic-04-first-express-app/)
+* see backlog below
+* App on Heroku: https://wtat1-module-handbook.herokuapp.com/
 
 ## Usage
 
 * start with
 
-    nodemon main.js
+    * production: node main.js
+    * development: nodemon main.js
+  
 
+# Sprint 03: Deployment
+
+## Preparation: Linting, Debugging und Logging
+### Linting with eslint
+
+        npm install eslint --save-dev
+        npx eslint --init
+        
+and then, for example, run:
+
+        npx eslint main.js
+        npx eslint coursesController.js --fix
+        
+First run crashed with version 6.8.0, installed 7.0.0-rc.0 which worked.
+You can find my config at .eslintrc.yml, I've tracked the questions in
+doc/eslint-install.md  as they are different than the ones in the book.
+You can make other choices if you want to.
+
+Just make sure that you use the same code formatting everywhere from now on!
+Make a habit of checking your changes before committing.
+
+Webstorm's format command doesn't pick up the eslint formatting rules, but
+it is possible to run eslint automatically on save by configuring it under 
+"Languages & Frameworks => JavaScript => Code Quality tools"
+
+* https://www.jetbrains.com/help/webstorm/eslint.html#
+* https://standardjs.com/
+
+## Debugger/Logger
+
+### Logging
+    export DEBUG=*
+    node main.js
+
+### oder über morgan
+
+* installed morgan: npm install morgan
+* use morgan in main.js:
+
+    const morgan = require('morgan')
+    app.use(morgan(":method :url :status * :response-time ms"))
+
+### Debugger
+
+    node inspect main.js
+
+    https://nodejs.org/en/docs/guides/debugging-getting-started/
+
+I use the debugger in JetBrains WebStorm. I had to create a second run configuration using plain node instead of nodemon to avoid this error:
+
+    node: [DEP0062]: `node --debug` and `node --debug-brk` are invalid. Please use `node --    inspect` and `node --inspect-brk` instead.
+
+* Debugging node in WebStorm: https://www.jetbrains.com/help/webstorm/running-and-debugging-node-js.html#
+
+
+## Deployment on Heroku
+
+### Installing Heroku CLI
+
+- Follow the Installation instructions for your Platform here: Heroku CLI: 
+[https://devcenter.heroku.com/articles/getting-started-with-nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+
+    heroku create
+
+this automatically puts a new heroku remote into the git config, run
+
+    cat .git/config
+
+to confirm that if you are curious
+
+### Create and Rename your Heroku app
+
+Your app should be named according to your group name; please use this form: wtat1-group-x .
+
+    heroku rename wtat1-module-handbook
+
+### Preparing the Codebase
+
+After setting up the heroku cli (command line interface), you can go straight to "Preparing your Codebase for Heroku Deployment":
+
+- [Preparing a Codebase for Heroku Deployment](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment)
+
+*  [Add a Procfile](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment#3-add-a-procfile)
+
+
+    echo "web: node main.js" > Procfile
+
+* rename your app:
+
+
+    heroku rename wtat1-module-handbook
+
+  
 # Sprint 02
 
 This sprint is about persisting data in the database.  
@@ -17,8 +120,11 @@ As I finally want my modules in the database, I will implement the story
 | 015 | As a program creator, I can create new Courses for a program.
 
 Note that this week is just about retrieving data and creating new simple records.
+
 I've also created an example below how the database can be populated with test data using
-mongoimport (not in the book).
+mongoimport (not in the book), which I actually switched back during the next sprint 
+as the variant shown in the book using a seeding script in JavaScript makes seeding on 
+Heroku simpler and more secure. So rather follow the book right away on seeding.
 
 ## Mongo Installation
 
@@ -41,6 +147,14 @@ after starting the cli with ``mongo`` (if you've installed mongo in docker as de
 
 ## Seeding the database
 
+
+
+Lesson 15 ends with an example on how to seed the database using JavaScript.
+
+I tried out mongoimport in the example app, which is easier to create, but
+not as convenient to call. Seeding the database on heroku is easier if you
+have a JavaScript script as described in the book, and safer as you don't have
+to juggle your heroku database credentials around.
 ( in the mongo container:)
 
     mongoimport --uri "mongodb://localhost:27017/modulehandbook_db" --collection=courses data/seed/tryout
@@ -49,10 +163,10 @@ after starting the cli with ``mongo`` (if you've installed mongo in docker as de
 ## Documentation
 - Mongoose: https://mongoosejs.com/
 - Mongoose getting started: https://mongoosejs.com/docs/index.html
-- Schematypes: https://mongoosejs.com/docs/schematypes.html
 
+- Schema types: https://mongoosejs.com/docs/schematypes.html
 
-# Sprint 01 & 02
+# Sprint 01 
 
 ## Stories implemented in Sprint 1 (Plain Node App in other repository)
 
@@ -129,6 +243,7 @@ For implementing this, I will touch story 023 again and fill it with complete co
 | 011 | As a (Quality /Faculty  / Program / Module) manager I want to be able to see which changes have been made by whom in the module database.                                                            |           |                                            |
 | 012 | As an Administrator, I can add or approve new users to the module database.                                                                                                                          |           |                                            |
 | 013 | As an Administrator, I can change all roles of all users in the module database.                                                                                                                     |           |                                            |
+
 
 ## Roles in the App
 

@@ -1,10 +1,8 @@
-'use strict'
-
-const modules = [{
+const coursesIMIB = [{
   semester: 1,
   required: 'required',
   code: 'B1',
-  name: 'Informatik  1',
+  name: 'Informatik 1',
   mission: null,
   ects: 4,
   examination: null,
@@ -16,10 +14,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.706Z',
-  updated_at: '2020-05-01T10:15:24.706Z'
-}, {
+  skills_general: null
+},
+{
   semester: 1,
   required: 'required',
   code: 'B2',
@@ -35,10 +32,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.740Z',
-  updated_at: '2020-05-01T10:15:24.740Z'
-}, {
+  skills_general: null
+},
+{
   semester: 1,
   required: 'required',
   code: 'B3',
@@ -54,10 +50,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.759Z',
-  updated_at: '2020-05-01T10:15:24.759Z'
-}, {
+  skills_general: null
+},
+{
   semester: 1,
   required: 'required',
   code: 'B4',
@@ -73,10 +68,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.779Z',
-  updated_at: '2020-05-01T10:15:24.779Z'
-}, {
+  skills_general: null
+},
+{
   semester: 1,
   required: 'required',
   code: 'B5',
@@ -92,10 +86,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.797Z',
-  updated_at: '2020-05-01T10:15:24.797Z'
-}, {
+  skills_general: null
+},
+{
   semester: 1,
   required: 'required',
   code: 'B6',
@@ -111,10 +104,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.816Z',
-  updated_at: '2020-05-01T10:15:24.816Z'
-}, {
+  skills_general: null
+},
+{
   semester: 2,
   required: 'required',
   code: 'B7',
@@ -130,10 +122,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.843Z',
-  updated_at: '2020-05-01T10:15:24.843Z'
-}, {
+  skills_general: null
+},
+{
   semester: 2,
   required: 'required',
   code: 'B8',
@@ -149,10 +140,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.862Z',
-  updated_at: '2020-05-01T10:15:24.862Z'
-}, {
+  skills_general: null
+},
+{
   semester: 2,
   required: 'required',
   code: 'B9',
@@ -168,10 +158,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.880Z',
-  updated_at: '2020-05-01T10:15:24.880Z'
-}, {
+  skills_general: null
+},
+{
   semester: 2,
   required: 'required',
   code: 'B10',
@@ -187,10 +176,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.898Z',
-  updated_at: '2020-05-01T10:15:24.898Z'
-}, {
+  skills_general: null
+},
+{
   semester: 2,
   required: 'required',
   code: 'B11',
@@ -206,10 +194,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.918Z',
-  updated_at: '2020-05-01T10:15:24.918Z'
-}, {
+  skills_general: null
+},
+{
   semester: 2,
   required: 'required',
   code: 'B12',
@@ -225,10 +212,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.940Z',
-  updated_at: '2020-05-01T10:15:24.940Z'
-}, {
+  skills_general: null
+},
+{
   semester: 3,
   required: 'required',
   code: 'B13',
@@ -244,10 +230,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.957Z',
-  updated_at: '2020-05-01T10:15:24.957Z'
-}, {
+  skills_general: null
+},
+{
   semester: 3,
   required: 'required',
   code: 'B14',
@@ -263,29 +248,51 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.975Z',
-  updated_at: '2020-05-01T10:15:24.975Z'
-}, {
+  skills_general: null
+},
+{
   semester: 3,
   required: 'required',
   code: 'B15',
   name: 'Informatik 3',
   mission: null,
   ects: 4,
-  examination: null,
-  objectives: null,
-  contents: null,
-  prerequisites: null,
-  literature: null,
+  examination: 'Semesterbegleitende Übungen 35% und Klausur (90 min, 65%)',
+  objectives: 'Die Studierenden haben gelernt, wie man ein komplexes Softwarebasiertes\n' +
+      'System analysiert, modelliert und eine Lösung entwirft.\n' +
+      '- Die Studierende können sicher mit Entwurfsmuster umgehen und\n' +
+      'sie in einer aktuellen Programmiersprache praktisch umsetzen.\n' +
+      '- Die Studierenden haben Modellierungs-Notationen wie UML sicher\n' +
+      'anzuwenden gelernt.\n' +
+      '- Sie haben verstanden, wie sie die Methoden des Software-\n' +
+      'Engineerings auf der Entwicklung von Mediensysteme anwenden\n' +
+      'können.\n' +
+      '- Sie können Algorithmen der Lokalisierung und Internationalisierung\n' +
+      'von Software umsetzen.',
+  contents: '- Software-Entwicklungs-Lebenszyklen, vor allem Agile Entwicklung\n' +
+      '- Object-Oriented Modellierung mit UML (Use Cases, Use Case Diagram, Class Diagrams, State Diagrams, Sequence\n' +
+      'Diagrams)\n' +
+      '- Anforderungsanalyse\n' +
+      '- Entwurfsmuster (Design Patterns)\n' +
+      '- Implementierung von Design Pattern\n' +
+      '- Testverfahren\n' +
+      '- Software-Architekturen\n' +
+      '- Internationalisierung und Lokalisierung von Software Systemen',
+  prerequisites: 'B1, B7',
+  literature: 'There are a number of books that can be useful for this course. The first one is the book I will be using as a basis for much of the course material.\n' +
+      '\n' +
+      'Ian Sommerville (2015). Software Engineering, English edition, [10th edition]. Prentice Hall. Ian has now made a number of videos on various topics from the book or on supplementary topics. Have a look around at http://iansommerville.com/software-engineering-book/videos/software-engineering/\n' +
+      'Robert C. Martin (2008). Clean Code. Prentice Hall.\n' +
+      'Andrew Hunt & David Thomas (1999). The Pragmatic Programmer. From Journeyman to Master. Addison-Wesley.\n' +
+      'Hal Fulton, Russel A. Olsen & André Arko (2015). The Ruby Way. [3rd edition]. Addison-Wesley\n' +
+      'Sandi Metz (2012). Practical Object Oriented Design in Ruby: An Agile Primer.',
   methods: 'P SL/Ü',
-  skills_knowledge_understanding: null,
-  skills_intellectual: null,
-  skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:24.992Z',
-  updated_at: '2020-05-01T10:15:24.992Z'
-}, {
+  skills_knowledge_understanding: '',
+  skills_intellectual: '',
+  skills_practical: '',
+  skills_general: ''
+},
+{
   semester: 3,
   required: 'required',
   code: 'B16',
@@ -301,10 +308,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.018Z',
-  updated_at: '2020-05-01T10:15:25.018Z'
-}, {
+  skills_general: null
+},
+{
   semester: 3,
   required: 'required',
   code: 'B17',
@@ -320,10 +326,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.036Z',
-  updated_at: '2020-05-01T10:15:25.036Z'
-}, {
+  skills_general: null
+},
+{
   semester: 3,
   required: 'required',
   code: 'B18',
@@ -339,10 +344,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.054Z',
-  updated_at: '2020-05-01T10:15:25.054Z'
-}, {
+  skills_general: null
+},
+{
   semester: 4,
   required: 'required',
   code: 'B19',
@@ -358,10 +362,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.071Z',
-  updated_at: '2020-05-01T10:15:25.071Z'
-}, {
+  skills_general: null
+},
+{
   semester: 4,
   required: 'required',
   code: 'B20',
@@ -377,10 +380,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.088Z',
-  updated_at: '2020-05-01T10:15:25.088Z'
-}, {
+  skills_general: null
+},
+{
   semester: 4,
   required: 'required',
   code: 'B20.1',
@@ -396,10 +398,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.104Z',
-  updated_at: '2020-05-01T10:15:25.104Z'
-}, {
+  skills_general: null
+},
+{
   semester: 4,
   required: 'required',
   code: 'B20.2',
@@ -415,10 +416,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.126Z',
-  updated_at: '2020-05-01T10:15:25.126Z'
-}, {
+  skills_general: null
+},
+{
   semester: 5,
   required: 'required',
   code: 'B21',
@@ -434,10 +434,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.143Z',
-  updated_at: '2020-05-01T10:15:25.143Z'
-}, {
+  skills_general: null
+},
+{
   semester: 5,
   required: 'required',
   code: 'B22',
@@ -453,10 +452,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.160Z',
-  updated_at: '2020-05-01T10:15:25.160Z'
-}, {
+  skills_general: null
+},
+{
   semester: 5,
   required: 'required',
   code: 'B23',
@@ -472,10 +470,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.183Z',
-  updated_at: '2020-05-01T10:15:25.183Z'
-}, {
+  skills_general: null
+},
+{
   semester: 5,
   required: 'required',
   code: 'B24.1',
@@ -491,10 +488,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.198Z',
-  updated_at: '2020-05-01T10:15:25.198Z'
-}, {
+  skills_general: null
+},
+{
   semester: 5,
   required: 'required',
   code: 'B24.2',
@@ -510,10 +506,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.215Z',
-  updated_at: '2020-05-01T10:15:25.215Z'
-}, {
+  skills_general: null
+},
+{
   semester: 6,
   required: 'required',
   code: 'B25',
@@ -529,10 +524,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.231Z',
-  updated_at: '2020-05-01T10:15:25.231Z'
-}, {
+  skills_general: null
+},
+{
   semester: 6,
   required: 'required',
   code: 'B26',
@@ -548,10 +542,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.248Z',
-  updated_at: '2020-05-01T10:15:25.248Z'
-}, {
+  skills_general: null
+},
+{
   semester: 6,
   required: 'required',
   code: 'B27',
@@ -567,10 +560,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.264Z',
-  updated_at: '2020-05-01T10:15:25.264Z'
-}, {
+  skills_general: null
+},
+{
   semester: 6,
   required: 'required',
   code: 'B28',
@@ -586,10 +578,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.280Z',
-  updated_at: '2020-05-01T10:15:25.280Z'
-}, {
+  skills_general: null
+},
+{
   semester: 6,
   required: 'required',
   code: 'B29',
@@ -605,10 +596,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.296Z',
-  updated_at: '2020-05-01T10:15:25.296Z'
-}, {
+  skills_general: null
+},
+{
   semester: 6,
   required: 'required',
   code: 'B30',
@@ -624,10 +614,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.319Z',
-  updated_at: '2020-05-01T10:15:25.319Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'GTAT1',
@@ -643,10 +632,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.336Z',
-  updated_at: '2020-05-01T10:15:25.336Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'VCAT1',
@@ -662,15 +650,14 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.354Z',
-  updated_at: '2020-05-01T10:15:25.354Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'WTAT1',
-  name: 'Web Technology  –  Aktuelle Themen 1',
-  mission: null,
+  name: 'Web Technology – Aktuelle Themen 1',
+  mission: 'Kenntnisse entsprechend dem ausgewählten Fach aus aktuellen Themen des Felds Web Technology',
   ects: 5,
   examination: null,
   objectives: null,
@@ -681,10 +668,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.371Z',
-  updated_at: '2020-05-01T10:15:25.371Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'GT2',
@@ -700,10 +686,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.388Z',
-  updated_at: '2020-05-01T10:15:25.388Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'VC2',
@@ -719,10 +704,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.405Z',
-  updated_at: '2020-05-01T10:15:25.405Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'WT2',
@@ -738,10 +722,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.423Z',
-  updated_at: '2020-05-01T10:15:25.423Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'GTAT2',
@@ -757,10 +740,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.441Z',
-  updated_at: '2020-05-01T10:15:25.441Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'VCAT2',
@@ -776,10 +758,9 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.459Z',
-  updated_at: '2020-05-01T10:15:25.459Z'
-}, {
+  skills_general: null
+},
+{
   semester: 0,
   required: 'elective',
   code: 'WTAT2',
@@ -795,104 +776,8 @@ const modules = [{
   skills_knowledge_understanding: null,
   skills_intellectual: null,
   skills_practical: null,
-  skills_general: null,
-  created_at: '2020-05-01T10:15:25.483Z',
-  updated_at: '2020-05-01T10:15:25.483Z'
+  skills_general: null
 }]
 
-const studentProgress = [
-  {
-    code: 'B1',
-    semester: 'WS2019/2020',
-    status: 'passed'
-  },
-  {
-    code: 'B2',
-    semester: 'WS2019/2020',
-    status: 'passed'
-  },
-  {
-    code: 'B3',
-    semester: 'WS2019/2020',
-    status: 'passed'
-  },
-  {
-    code: 'B4',
-    semester: 'WS2019/2020',
-    status: 'passed'
-  },
-  {
-    code: 'B5',
-    semester: 'WS2019/2020',
-    status: 'enrolled'
-  },
-
-  {
-    code: 'B6',
-    semester: 'WS2019/2020',
-    status: 'enrolled'
-  },
-  {
-    code: 'B7',
-    semester: 'SoSe 2020',
-    status: 'enrolled'
-  },
-  {
-    code: 'B8',
-    semester: 'SoSe 2020',
-    status: 'enrolled'
-  },
-  {
-    code: 'B9',
-    semester: 'SoSe 2020',
-    status: 'enrolled'
-  },
-  {
-    code: 'B10',
-    semester: 'SoSe 2020',
-    status: 'enrolled'
-  },
-  {
-    code: 'B13',
-    semester: 'WS2020/2021',
-    status: 'planned'
-  },
-  {
-    code: 'B14',
-    semester: 'WS2020/2021',
-    status: 'planned'
-  },
-  {
-    code: 'B15',
-    semester: 'WS2020/2021',
-    status: 'planned'
-  }
-
-]
-const defaultStudentProgress = {
-  code: '',
-  semester: '',
-  status: 'none'
-}
-
-exports.showIndex = (req, res) => {
-  res.render('index')
-}
-exports.showStudentView = (req, res) => {
-  // console.log(req.params);
-  // console.log(req.params.format);
-  // console.log("path: " + req.path);
-  // console.log("url: " + req.url);
-  // console.log(req.route)
-  const requestedView = req.params.format || 'list'
-  // console.log(requestedView);
-  const view = 'modules_' + requestedView
-  res.render(view, {
-    modules: modules,
-    studentProgress: studentProgress,
-    defaultStatus: defaultStudentProgress
-  })
-}
-exports.showAbout = (req, res) => {
-  res.render('about')
-}
+// console.log(coursesIMIB.length); // => 42
+module.exports = coursesIMIB
