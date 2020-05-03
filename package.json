@@ -8,7 +8,8 @@
 
     "mongo": "docker-compose up -d",
     "mongobash": "docker-compose exec mongo bash",
-    "test": ""
+    "test": "mocha",
+    "test:watch": "mocha --watch --reporter min"
   },
   "author": "Barne Kleinen",
   "license": "MIT",
