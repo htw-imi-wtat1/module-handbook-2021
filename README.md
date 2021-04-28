@@ -35,7 +35,7 @@ commonalities and differences.
 
 ### Layouts and Partials
 
-Look at your whole backlog and choose a story or more that requires a different view from your first stories, and 
+Look at your whole backlog and choose a story or more that requires a different view from your first stories, and
 implement it using layouts and partials.
 
 - created layout.js and adapted views
@@ -43,9 +43,9 @@ implement it using layouts and partials.
 
 ### Passing Parameters in Routes
 
-| 014 | As a student, I can see the whole study plan in a tabular view. 
+| 014 | As a student, I can see the whole study plan in a tabular view.
 
-I make use of passing parameters via the route to switch between the two view options. The controller switches to 
+I make use of passing parameters via the route to switch between the two view options. The controller switches to
 a different view template depending on the parameter.
 (I've also renamed the route from students to modules)
 
@@ -56,9 +56,9 @@ Find a Story that can make use of Passing content from the controller to the vie
 
 For implementing this, I will touch story 023 again and fill it with complete courses information.
 
-#### 023 - As a student, I can quickly get an overview of my progress within the study program. 
-                                                                                                            
-- created content in homeController.js and added it to the [student's view](http://localhost:3002/students) 
+#### 023 - As a student, I can quickly get an overview of my progress within the study program.
+
+- created content in homeController.js and added it to the [student's view](http://localhost:3002/modules)
 
 ## Backlog
 

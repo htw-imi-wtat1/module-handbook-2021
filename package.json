@@ -4,7 +4,7 @@
   "description": "A Module Handbook App for supporting collaborative module handbook authoring and summaries for studies.",
   "main": "main.js",
   "scripts": {
-    "run dev": "nodemon main.js",
+    "start": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Barne Kleinen",
