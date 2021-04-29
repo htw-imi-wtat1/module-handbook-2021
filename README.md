@@ -1,6 +1,6 @@
-# Example for Getting Programming with Node Sprints 02 and 03
+# Example for Getting Programming with Node Sprints 01 and 02
 
-* for [WTAT1 SoSe 20](https://bkleinen.github.io/classes/ss2020/wtat1/topics/topic-04-first-express-app/)
+* for [WTAT1 SoSe 21](https://bkleinen.github.io/classes/ss2021/wtat1/topics/sprint-02)
 * see backlog below
 
 ## Usage
@@ -9,7 +9,7 @@
 
     nodemon main.js
 
-# Sprint 03
+# Sprint 02
 
 This sprint is about persisting data in the database.  
 As I finally want my modules in the database, I will implement the story
@@ -29,22 +29,19 @@ you can just copy docker-compose.yml and use the scripts I've added to package.j
     run npm mongo       // docker-compose up -d
 
 
-
 ## Mongo Commands
 
-after starting the cli with ``mongo``
-
+after starting the cli with ``mongo`` (if you've installed mongo in docker as described above, run yarn run mongobash first)
     show dbs
-    use courses
+    use modulehandbook_db
     show collections
-    db.courses.findOne
+    db.courses.findOne()
     db.courses.deleteMany({})
     db.courses.update(..)
 
 ## Seeding the database
 
 ( in the mongo container:)
-
 
     mongoimport --uri "mongodb://localhost:27017/modulehandbook_db" --collection=courses data/seed/tryout
     mongoexport --uri "mongodb://localhost:27017/modulehandbook_db" --collection=courses  > data/seed/export    
@@ -107,59 +104,32 @@ For implementing this, I will touch story 023 again and fill it with complete co
 
 #### 023 - As a student, I can quickly get an overview of my progress within the study program.
 
-<<<<<<< HEAD
-- created content in homeController.js and added it to the [student's view](http://localhost:3002/modules)
-
-## Backlog
-
-| #   | Story                                                                                                                                                                                                | Sprint   | Status               |
-|:----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------|:---------------------|
-| 042 | As a student or lecturer, I see an overview of the whole study program with all modules including Title, Format and ECTS on the site.                                                                | Sprint 1 | Basic Implementation |
-| 023 | As a student, I can quickly get an overview of the my progress within the study program.                                                                                                             | Sprint 1 | Basic Implementation, Data From Controller|
-| 001 | As a member of a consortium, I can edit module descriptions assigned to me such that they are immediately visible to my colleagues and everyone is clear about the newest version of the curriculum. |          |                      |
-| 002 | As someone responsible for the study program, I find a structure for module descriptions that aids me to design my modules in a way that is prepared for program accreditation.                      |          |                      |
-| 003 | As a Program or Module manager, I can update module descriptions for the forthcoming term such that they I can assure they are current while maintaining a history for former terms.                 |          |                      |
-| 004 | As a student, I can print out a description of the courses / modules I took during my studies to document my academic career.                                                                        |          |                      |
-| 005 | As a faculty manager, I can revise and supervise the module descriptions of all programs in my faculty.                                                                                              |          |                      |
-| 006 | As a program manager, I can revise and edit the module descriptions of all modules in my program up till a set deadline for each term.                                                               |          |                      |
-| 007 | As a module manager, I can edit the module descriptions of all modules assigned to me up till a set deadline for each term.                                                                          |          |                      |
-| 008 | As a student, I can see updated module descriptions at the beginning of each term and use them for planning my studies and selecting elective courses.                                               |          |                      |
-| 009 | As a student, I can get an overview of the whole program marking my progress by visualising passed and open classes such that I can plan my further studies.                                         |          |                      |
-| 010 | As an Administrator or Quality manager, I can print out or store the module handbook for the complete program (e.g. as PDF).                                                                         |          |                      |
-| 010 | As a (Quality /Faculty  / Program / Module) manager I want to be sure that only authorised persons can edit and change the module and program descriptions.                                          |          |                      |
-| 011 | As a (Quality /Faculty  / Program / Module) manager I want to be able to see which changes have been made by whom in the module database.                                                            |          |                      |
-| 012 | As an Administrator, I can add or approve new users to the module database.                                                                                                                          |          |                      |
-| 013 | As an Administrator, I can change all roles of all users in the module database.
-| 014 | As a student, I can see the whole course program in a tabular view.                                                                                                                    |          |                      |
-| 015 | As a program creator, I can create new Courses for a program.
-=======
 - created content in homeController.js and added it to the [student's view](http://localhost:3002/students)
 
 ## Backlog
 
 
-| #   | Story                                                                                                                                                                                                | Sprint       | Status                                     |
-|:----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:-------------------------------------------|
-| 042 | As a student or lecturer, I see an overview of the whole study program with all modules including Title, Format and ECTS on the site.                                                                | Sprint 01    | Basic Implementation                       |
-| 023 | As a student, I can quickly get an overview of the my progress within the study program.                                                                                                             | Sprint 01,02 | Basic Implementation, Data From Controller |
-| 014 | As a student, I can see the whole course program in a tabular view.                                                                                                                                  | Sprint 02    | Done (without connection to db)            |
-| 015 | As a program creator, I can create new Courses for a program.                                                                                                                                        | Sprint 03    | Done                                       |
-| 001 | As a member of a consortium, I can edit module descriptions assigned to me such that they are immediately visible to my colleagues and everyone is clear about the newest version of the curriculum. |              |                                            |
-| 002 | As someone responsible for the study program, I find a structure for module descriptions that aids me to design my modules in a way that is prepared for program accreditation.                      |              |                                            |
-| 003 | As a Program or Module manager, I can update module descriptions for the forthcoming term such that they I can assure they are current while maintaining a history for former terms.                 |              |                                            |
-| 004 | As a student, I can print out a description of the courses / modules I took during my studies to document my academic career.                                                                        |              |                                            |
-| 005 | As a faculty manager, I can revise and supervise the module descriptions of all programs in my faculty.                                                                                              |              |                                            |
-| 006 | As a program manager, I can revise and edit the module descriptions of all modules in my program up till a set deadline for each term.                                                               |              |                                            |
-| 007 | As a module manager, I can edit the module descriptions of all modules assigned to me up till a set deadline for each term.                                                                          |              |                                            |
-| 008 | As a student, I can see updated module descriptions at the beginning of each term and use them for planning my studies and selecting elective courses.                                               |              |                                            |
-| 009 | As a student, I can get an overview of the whole program marking my progress by visualising passed and open classes such that I can plan my further studies.                                         |              |                                            |
-| 010 | As an Administrator or Quality manager, I can print out or store the module handbook for the complete program (e.g. as PDF).                                                                         |              |                                            |
-| 010 | As a (Quality /Faculty  / Program / Module) manager I want to be sure that only authorised persons can edit and change the module and program descriptions.                                          |              |                                            |
-| 011 | As a (Quality /Faculty  / Program / Module) manager I want to be able to see which changes have been made by whom in the module database.                                                            |              |                                            |
-| 012 | As an Administrator, I can add or approve new users to the module database.                                                                                                                          |              |                                            |
-| 013 | As an Administrator, I can change all roles of all users in the module database.                                                                                                                     |              |                                            |
-|     |                                                                                                                                                                                                      |              |                                            |
->>>>>>> b3bf37f (documentation)
+| #   | Story                                                                                                                                                                                                | Sprint    | Status                                     |
+|:--- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------- |:------------------------------------------ |
+| 042 | As a student or lecturer, I see an overview of the whole study program with all modules including Title, Format and ECTS on the site.                                                                | Sprint 01 | Basic Implementation                       |
+| 023 | As a student, I can quickly get an overview of the my progress within the study program.                                                                                                             | Sprint 01 | Basic Implementation, Data From Controller |
+| 014 | As a student, I can see the whole course program in a tabular view.                                                                                                                                  | Sprint 01 | Done (without connection to db)            |
+| 015 | As a program creator, I can create new Courses for a program.                                                                                                                                        | Sprint 02 | Done                                       |
+| 001 | As a member of a consortium, I can edit module descriptions assigned to me such that they are immediately visible to my colleagues and everyone is clear about the newest version of the curriculum. |           |                                            |
+| 002 | As someone responsible for the study program, I find a structure for module descriptions that aids me to design my modules in a way that is prepared for program accreditation.                      |           |                                            |
+| 003 | As a Program or Module manager, I can update module descriptions for the forthcoming term such that they I can assure they are current while maintaining a history for former terms.                 |           |                                            |
+| 004 | As a student, I can print out a description of the courses / modules I took during my studies to document my academic career.                                                                        |           |                                            |
+| 005 | As a faculty manager, I can revise and supervise the module descriptions of all programs in my faculty.                                                                                              |           |                                            |
+| 006 | As a program manager, I can revise and edit the module descriptions of all modules in my program up till a set deadline for each term.                                                               |           |                                            |
+| 007 | As a module manager, I can edit the module descriptions of all modules assigned to me up till a set deadline for each term.                                                                          |           |                                            |
+| 008 | As a student, I can see updated module descriptions at the beginning of each term and use them for planning my studies and selecting elective courses.                                               |           |                                            |
+| 009 | As a student, I can get an overview of the whole program marking my progress by visualising passed and open classes such that I can plan my further studies.                                         |           |                                            |
+| 010 | As an Administrator or Quality manager, I can print out or store the module handbook for the complete program (e.g. as PDF).                                                                         |           |                                            |
+| 010 | As a (Quality /Faculty  / Program / Module) manager I want to be sure that only authorised persons can edit and change the module and program descriptions.                                          |           |                                            |
+| 011 | As a (Quality /Faculty  / Program / Module) manager I want to be able to see which changes have been made by whom in the module database.                                                            |           |                                            |
+| 012 | As an Administrator, I can add or approve new users to the module database.                                                                                                                          |           |                                            |
+| 013 | As an Administrator, I can change all roles of all users in the module database.                                                                                                                     |           |                                            |
+
 ## Roles in the App
 
 Administrator
